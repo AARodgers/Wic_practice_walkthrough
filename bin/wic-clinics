@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require './lib/wic_practice_walkthrough.rb'
+
+WicPracticeWalkthrough::CLI.new.call
