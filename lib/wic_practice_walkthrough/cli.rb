@@ -4,13 +4,14 @@ class WicPracticeWalkthrough::CLI
     menu
   end
 
-#   def list_all_clinics
+  def list_all_clinics
 #     #fake data will use scrape
 #     puts "Welcome to the Colorado WIC Clinics App: "
 #     puts <<-DOC.gsub /^\s+/, ''
 #         1. Alamosa WIC Clinic 2. Antoninto WIC Clinic
 #     DOC
-#   end
+    @clinics = WicPracticeWalkthrough::Clinics.all_clinics
+  end
 
   def menu
     puts "Welcome to the Colorado WIC Clinics App: "
