@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
-require './lib/wic_practice_walkthrough.rb'
+# require './lib/wic_practice_walkthrough.rb'
+
+require "bundler/setup"
+require "wic_practice_walkthrough"
 
 WicPracticeWalkthrough::CLI.new.call

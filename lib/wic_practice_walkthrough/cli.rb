@@ -6,7 +6,7 @@ class WicPracticeWalkthrough::CLI
 
   def list_all_clinics
 #     #fake data will use scrape
-#     puts "Welcome to the Colorado WIC Clinics App: "
+    puts "Welcome to the Colorado WIC Clinics App: "
 #     puts <<-DOC.gsub /^\s+/, ''
 #         1. Alamosa WIC Clinic 2. Antoninto WIC Clinic
 #     DOC
@@ -19,6 +19,15 @@ class WicPracticeWalkthrough::CLI
     input = nil
     while input != "exit"
         input = gets.strip.downcase
+
+        # if input.to_i > 0
+        #   puts @clinics[input.to_i-1]
+        # elsif input == "list"
+        #     list_all_clinics
+        # else
+        #     puts "Not sure what you want: type list or exit"
+        # end
+
         case input
         when "81101"
             puts "All clinics with zip code 81101"
