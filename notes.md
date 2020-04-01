@@ -1,3 +1,32 @@
+Denver Health WIC Clinics:
+https://www.wicprograms.org/ci/co-denver
+
+doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
+
+CLI - Welcomes user to Denver WIC Clinic app.
+    It ask user to select:
+        'list' for a list of all clinics
+        'more info about WIC
+        exit
+(USER PICKS AN OPTION)
+        More info about WIC =>
+            paragraph about WIC
+        List =>
+            will list all clinics
+                Ask user to select a clinc for more information. (USER SELECTS A CLINIC)
+                Clinic information comes up including:
+
+
+
+
+
+
+
+
+
+
+===============================================================================================================
+
 SOME CODE:
 Site: https://www.coloradowic.gov/find-wic-clinic
 For titles but only goes to Bailey???:
@@ -24,4 +53,3 @@ puts wic_clinic_google_maps
 
 Wic_clinic_phone =
 wic_clinic_phone = doc.css(".teaser--clinic__phone").text
-
