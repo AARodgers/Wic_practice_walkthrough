@@ -18,29 +18,45 @@ class WicPracticeWalkthrough::CLI
   end
 
   def select_option
-    prompt.select("Please select an option:", %w(List_of_Denver_WIC_Clinics Information_about_WIC Exit))
-  end
-
-  def user_selection
-    case selection
-    when "List_of_Denver_WIC_Clinics"
-        puts "TODO List of all WIC Clinic names"
-    when "81120"
-        puts "All clinics with zip code 81120"
-    when "list"
-        puts "A list of all of the Colorado Clinics"
-    when "exit"
-        goodbye
+    input = prompt.select("Please select an option:", ["See a list of Denver WIC Clincs", "Get more information about WIC", "Exit"])
+    case input
+    when "See a list of Denver WIC Clincs"
+      puts "a list all clinics"
+    when "Get more information about WIC"
+      puts "info about wic"
+    when "Exit"
+      goodbye
     end
-
   end
 
   def goodbye
     puts "Have a Great Day and go to Eatright.org to get more information about healthy eating!"
   end
-
-
 end
+
+  # if "See a list of Denver WIC Clincs"
+  #   puts "A list of all wic clincis"
+  # elsif "Get more information about WIC"
+  #   puts "more info about wic"
+  # elsif "Exit"
+  #   goodbye
+  # else
+  #   select_option
+  # end
+
+  # def user_selection
+  #   users_selection = select_option
+  #   case users_selection
+  #   when "See a list of Denver WIC Clincs"
+  #       puts "List of all WIC Clinic names"
+  #   when  "Get more information about WIC"
+  #       puts "paragraph about WIC"
+  #   when "Exit"
+  #       goodbye
+  #   end
+  # end
+
+
 #   def list_all_clinics
 # #     #fake data will use scrape
 #     puts "Welcome to the Denver WIC Clinics App: "
@@ -77,8 +93,3 @@ end
 #         end
 #     end
 #   end
-
-  def goodbye
-    puts "Have a Great Day and go to Eatright.org to get more information about healthy eating!"
-  end
-# end
