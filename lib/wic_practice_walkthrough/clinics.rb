@@ -7,5 +7,5 @@ class WicPracticeWalkthrough::Clinics
         @lowry_clinic_info
     end
 
-    
+
 end

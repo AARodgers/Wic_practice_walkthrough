@@ -7,6 +7,7 @@ class WicPracticeWalkthrough::CLI
   def call
     welcome
     select_option
+    # list_of_all_clinics
   end
 
   def initialize
@@ -30,7 +31,13 @@ class WicPracticeWalkthrough::CLI
   end
 
   def list_of_all_clinics
-    prompt.select("Please pick a clinic for more information:", ["Lowry Family Health Center WIC Clinic", "Eastside Neighborhood Health Center", "Montbello WIC Clinic", "North Broadway Wic Clinic", "North Broadway Wic Clinic", "Colorado Department of Public Health & Environment", "Westside Family Health Center WIC Clinic"])
+    clinic_info = prompt.select("Please pick a clinic for more information or exit:", ["Lowry Family Health Center WIC Clinic", "Eastside Neighborhood Health Center", "Montbello WIC Clinic", "North Broadway Wic Clinic", "North Broadway Wic Clinic", "Colorado Department of Public Health & Environment", "Westside Family Health Center WIC Clinic", "Exit"])
+    case clinic_info
+    when "Lowry Family Health Center WIC Clinic"
+      puts WicPracticeWalkthrough::Clinics.scrape_lowry_clinic
+    when "Exit"
+      goodbye
+    end
   end
 
 
