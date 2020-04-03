@@ -21,7 +21,7 @@ class WicPracticeWalkthrough::CLI
     input = prompt.select("Please select an option:", ["See a list of Denver WIC Clincs", "Get more information about WIC", "Exit"])
     case input
     when "See a list of Denver WIC Clincs"
-      puts "a list all clinics"
+      list_of_all_clinics
     when "Get more information about WIC"
       puts "info about wic"
     when "Exit"
@@ -29,9 +29,10 @@ class WicPracticeWalkthrough::CLI
     end
   end
 
-  # def all_clinics
+  def list_of_all_clinics
+    prompt.select("Please pick a clinic for more information:", ["Lowry Family Health Center WIC Clinic", "Eastside Neighborhood Health Center", "Montbello WIC Clinic", "North Broadway Wic Clinic", "North Broadway Wic Clinic", "Colorado Department of Public Health & Environment", "Westside Family Health Center WIC Clinic"])
+  end
 
-  # end
 
   def goodbye
     puts "Have a Great Day and go to Eatright.org to get more information about healthy eating!"

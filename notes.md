@@ -4,8 +4,8 @@ https://www.wicprograms.org/ci/co-denver
 doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
 
 Lowery Family Health Center
-all_info = doc.css(".span12").first.css("p").text
-name = doc.css(".span12").first.css("h2").text     (w/o the .first it gives all of the clinic names)
+all_info = doc.css(".span12").first.css("p").text.strip
+name =
 address =
 hours:
 website:
