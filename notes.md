@@ -3,6 +3,18 @@ https://www.wicprograms.org/ci/co-denver
 
 doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
 
+Lowery Family Health Center
+all_info = doc.css(".span12").first.css("p").text
+name = doc.css(".span12").first.css("h2").text     (w/o the .first it gives all of the clinic names)
+address =
+hours:
+website:
+
+
+
+
+
+
 CLI - Welcomes user to Denver WIC Clinic app.
     It ask user to select:
         'list' for a list of all clinics
@@ -28,7 +40,7 @@ CLI - Welcomes user to Denver WIC Clinic app.
 ===============================================================================================================
 
 SOME CODE:
-Site: https://www.coloradowic.gov/find-wic-clinic
+Site:
 For titles but only goes to Bailey???:
 doc = Nokogiri::HTML(open("https://www.coloradowic.gov/find-wic-clinic"))
 

@@ -29,6 +29,10 @@ class WicPracticeWalkthrough::CLI
     end
   end
 
+  # def all_clinics
+
+  # end
+
   def goodbye
     puts "Have a Great Day and go to Eatright.org to get more information about healthy eating!"
   end
