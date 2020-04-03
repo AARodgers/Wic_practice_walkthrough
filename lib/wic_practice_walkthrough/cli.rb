@@ -15,7 +15,7 @@ class WicPracticeWalkthrough::CLI
   end
 
   def welcome
-    puts "Welcome to the Denver Health WIC Clinics App! "
+    puts "Welcome to the Denver Health WIC Clinics App!"
   end
 
   def select_option
@@ -24,17 +24,27 @@ class WicPracticeWalkthrough::CLI
     when "See a list of Denver WIC Clincs"
       list_of_all_clinics
     when "Get more information about WIC"
-      puts "info about wic"
+      puts "WIC: The Special Supplemental Nutrition Program for Women, Infants, and Children (WIC) is a nutrition program that provides nutritious groceries, nutrition education, breastfeeding support and other services free of charge to Colorado families who qualify. WIC’s goal is to help keep pregnant and breastfeeding women and children under age 5 healthy."
     when "Exit"
       goodbye
     end
   end
 
   def list_of_all_clinics
-    clinic_info = prompt.select("Please pick a clinic for more information or exit:", ["Lowry Family Health Center WIC Clinic", "Eastside Neighborhood Health Center", "Montbello WIC Clinic", "North Broadway Wic Clinic", "North Broadway Wic Clinic", "Colorado Department of Public Health & Environment", "Westside Family Health Center WIC Clinic", "Exit"])
+    clinic_info = prompt.select("Please pick a clinic for more information or exit:", ["Lowry Family Health Center WIC Clinic", "Eastside Neighborhood Health Center", "Montbello WIC Clinic", "North Broadway Wic Clinic", "Colorado Department of Public Health & Environment", "Westside Family Health Center WIC Clinic", "Exit"])
     case clinic_info
     when "Lowry Family Health Center WIC Clinic"
       puts WicPracticeWalkthrough::Clinics.scrape_lowry_clinic
+    when "Eastside Neighborhood Health Center"
+      puts "eastside center info"
+    when "Montbello WIC Clinic"
+      puts "montbello info"
+    when "North Broadway Wic Clinic"
+      puts "north broadway info"
+    when "Colorado Department of Public Health & Environment"
+      puts "dphe info"
+    when "Westside Family Health Center WIC Clinic"
+      puts "westside info"
     when "Exit"
       goodbye
     end
@@ -46,37 +56,6 @@ class WicPracticeWalkthrough::CLI
   end
 end
 
-  # if "See a list of Denver WIC Clincs"
-  #   puts "A list of all wic clincis"
-  # elsif "Get more information about WIC"
-  #   puts "more info about wic"
-  # elsif "Exit"
-  #   goodbye
-  # else
-  #   select_option
-  # end
-
-  # def user_selection
-  #   users_selection = select_option
-  #   case users_selection
-  #   when "See a list of Denver WIC Clincs"
-  #       puts "List of all WIC Clinic names"
-  #   when  "Get more information about WIC"
-  #       puts "paragraph about WIC"
-  #   when "Exit"
-  #       goodbye
-  #   end
-  # end
-
-
-#   def list_all_clinics
-# #     #fake data will use scrape
-#     puts "Welcome to the Denver WIC Clinics App: "
-# #     puts <<-DOC.gsub /^\s+/, ''
-# #         1. Alamosa WIC Clinic 2. Antoninto WIC Clinic
-# #     DOC
-#     @clinics = WicPracticeWalkthrough::Clinics.all_clinics
-#   end
 
 #   def menu
 #     puts "Welcome to the Denver Health WIC Clinics App: "
@@ -92,16 +71,3 @@ end
 #         # else
 #         #     puts "Not sure what you want: type list or exit"
 #         # end
-
-#         case input
-#         when "81101"
-#             puts "All clinics with zip code 81101"
-#         when "81120"
-#             puts "All clinics with zip code 81120"
-#         when "list"
-#             puts "A list of all of the Colorado Clinics"
-#         when "exit"
-#             goodbye
-#         end
-#     end
-#   end

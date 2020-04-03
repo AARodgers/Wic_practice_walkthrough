@@ -1,14 +1,20 @@
 Denver Health WIC Clinics:
 https://www.wicprograms.org/ci/co-denver
 
-doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
+
+this is the first nokogiri info for first clinci = doc.css(".span12").first
 
 Lowery Family Health Center
 all_info = doc.css(".span12").first.css("p").text.strip
-name =
-address =
-hours:
-website:
+name = doc.css(".span12").first.css("h2").text
+url: doc.css(".span12").first.css("a").attr("href").text
+
+phone, address, hours and description: doc.css(".span12").first.css("p").children.text.strip
+
+address and phone: doc.css(".span12").first.css("p")[0].text.strip.gsub("\r\n", "")
+
+
+
 
 
 
