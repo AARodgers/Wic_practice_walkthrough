@@ -6,17 +6,16 @@ this is the first nokogiri info for first clinci = doc.css(".span12").first
 
 Lowery Family Health Center
 all_info = doc.css(".span12").first.css("p").text.strip
+all_info2 =  @lowry_clinic_info = doc.css(".span12").first.css("p").text.strip
 name = doc.css(".span12").first.css("h2").text
 url: doc.css(".span12").first.css("a").attr("href").text
-
 phone, address, hours and description: doc.css(".span12").first.css("p").children.text.strip
-
 address and phone: doc.css(".span12").first.css("p")[0].text.strip.gsub("\r\n", "")
 
 
-
-
-
+To Do:
+- system clear after input
+-put exit option after Get more info and clinic options
 
 
 
