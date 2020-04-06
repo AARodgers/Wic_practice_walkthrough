@@ -12,14 +12,15 @@ class WicPracticeWalkthrough::Clinics
     end
 
 
-
-
-
-    # def self.scrape_eastside_clinic
-    #     doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
-    #     # @eastside_clinic_info = doc.css(".span12").first.css("p").text.strip
-    #     # @eastside_clinic_info
-    # end
+    def self.scrape_eastside_clinic
+        doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
+        eastside_clinic_info = []
+        url = doc.css(".span12")[1].css("a").attr("href").text
+        address_phone = doc.css(".span12")[1].css("p")[0].text.strip.gsub("\r\n", "")
+        eastside_clinic_info << url
+        eastside_clinic_info << address_phone
+        eastside_clinic_info
+    end
 
 
 end

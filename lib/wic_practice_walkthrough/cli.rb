@@ -36,7 +36,7 @@ class WicPracticeWalkthrough::CLI
     when "Lowry Family Health Center WIC Clinic"
       puts WicPracticeWalkthrough::Clinics.scrape_lowry_clinic
     when "Eastside Neighborhood Health Center"
-      puts "eastside center info"
+      puts WicPracticeWalkthrough::Clinics.scrape_eastside_clinic
     when "Montbello WIC Clinic"
       puts "montbello info"
     when "North Broadway Wic Clinic"
