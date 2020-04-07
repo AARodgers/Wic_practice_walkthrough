@@ -17,13 +17,30 @@ class WicPracticeWalkthrough::CLI
     puts "Welcome to the Denver Health WIC Clinics App!"
   end
 
+  def return_to_main_menu
+    return_options = prompt.select("Select Main Menu or More Information About WIC:", ["Main Menu", "More Information About WIC"])
+    case return_options
+    when "Main Menu"
+      system("clear")
+      call
+    when "More Information About WIC"
+      system("clear")
+      more_wic_info
+      return_to_main_menu
+    end
+  end
+
+  def more_wic_info
+    puts "WIC: The Special Supplemental Nutrition Program for Women, Infants, and Children (WIC) is a nutrition program that provides nutritious groceries, nutrition education, breastfeeding support and other services free of charge to Colorado families who qualify. WIC’s goal is to help keep pregnant and breastfeeding women and children under age 5 healthy."
+  end
+
   def select_option
     input = prompt.select("Please select an option:", ["See a list of Denver WIC Clincs", "Get more information about WIC", "Exit"])
     case input
     when "See a list of Denver WIC Clincs"
       list_of_all_clinics
     when "Get more information about WIC"
-      puts "WIC: The Special Supplemental Nutrition Program for Women, Infants, and Children (WIC) is a nutrition program that provides nutritious groceries, nutrition education, breastfeeding support and other services free of charge to Colorado families who qualify. WIC’s goal is to help keep pregnant and breastfeeding women and children under age 5 healthy."
+      more_wic_info
     when "Exit"
       goodbye
     end
@@ -36,6 +53,7 @@ class WicPracticeWalkthrough::CLI
       system("clear")
       puts "Lowry Family Health Center WIC Clinic Info:"
       puts WicPracticeWalkthrough::Clinics.scrape_lowry_clinic
+      return_to_main_menu
     when "Eastside Neighborhood Health Center"
       system("clear")
       puts "Eastside Neighborhood Health Center Info:"
