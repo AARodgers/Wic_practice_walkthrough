@@ -5,6 +5,7 @@ class WicPracticeWalkthrough::CLI
   attr_reader :prompt
 
   def call
+    system("clear")
     welcome
     select_option
   end
@@ -41,6 +42,7 @@ class WicPracticeWalkthrough::CLI
       list_of_all_clinics
     when "Get more information about WIC"
       more_wic_info
+      return_to_main_menu
     when "Exit"
       goodbye
     end
@@ -58,28 +60,33 @@ class WicPracticeWalkthrough::CLI
       system("clear")
       puts "Eastside Neighborhood Health Center Info:"
       puts WicPracticeWalkthrough::Clinics.scrape_eastside_clinic
+      return_to_main_menu
     when "Montbello WIC Clinic"
       system("clear")
       puts "Montbello WIC Clinic Info:"
       puts  WicPracticeWalkthrough::Clinics.scrape_montbello_clinic
+      return_to_main_menu
     when "North Broadway Wic Clinic"
       system("clear")
       puts  "North Broadway Wic Clinic Info:"
       puts  WicPracticeWalkthrough::Clinics.scrape_northbroadway_clinic
+      return_to_main_menu
     when "Colorado Department of Public Health & Environment"
       system("clear")
       puts  "Colorado Department of Public Health & Environment Info:"
       puts  WicPracticeWalkthrough::Clinics.scrape_dphe_clinic
+      return_to_main_menu
     when "Westside Family Health Center WIC Clinic"
       system("clear")
       puts  "Westside Family Health Center WIC Clinic Info:"
       puts WicPracticeWalkthrough::Clinics.scrape_westside_clinic
+      return_to_main_menu
     when "Exit"
       goodbye
     end
   end
 
   def goodbye
-    puts "Have a Great Day and go to Eatright.org to get more information about healthy eating!"
+    puts "Have a Great Day and go to Eatright.org to get more information about Healthy Eating!"
   end
 end
