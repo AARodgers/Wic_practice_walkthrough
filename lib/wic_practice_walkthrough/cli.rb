@@ -38,13 +38,13 @@ class WicPracticeWalkthrough::CLI
     when "Eastside Neighborhood Health Center"
       puts WicPracticeWalkthrough::Clinics.scrape_eastside_clinic
     when "Montbello WIC Clinic"
-      puts "montbello info"
+      puts  WicPracticeWalkthrough::Clinics.scrape_montbello_clinic
     when "North Broadway Wic Clinic"
-      puts "north broadway info"
+      puts  WicPracticeWalkthrough::Clinics.scrape_northbroadway_clinic
     when "Colorado Department of Public Health & Environment"
-      puts "dphe info"
+      puts  WicPracticeWalkthrough::Clinics.scrape_dphe_clinic
     when "Westside Family Health Center WIC Clinic"
-      puts "westside info"
+      puts WicPracticeWalkthrough::Clinics.scrape_westside_clinic
     when "Exit"
       goodbye
     end
