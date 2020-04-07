@@ -11,7 +11,6 @@ class WicPracticeWalkthrough::Clinics
         lowry_clinic_info
     end
 
-
     def self.scrape_eastside_clinic
         doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
         eastside_clinic_info = []
@@ -61,6 +60,4 @@ class WicPracticeWalkthrough::Clinics
         westside_clinic_info << address_phone
         westside_clinic_info
     end
-
-
 end
