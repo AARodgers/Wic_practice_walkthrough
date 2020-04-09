@@ -31,6 +31,14 @@ class WicPracticeWalkthrough::CLI
     end
   end
 
+  def return_to_only_main_menu
+    return_menu = prompt.select("Select to return to main menu:", ["Main Menu"])
+    case return_menu
+    when "Main Menu"
+      call
+    end
+  end
+
   def more_wic_info
     puts "WIC: The Special Supplemental Nutrition Program for Women, Infants, and Children (WIC) is a nutrition program that provides nutritious groceries, nutrition education, breastfeeding support and other services free of charge to Colorado families who qualify. WIC’s goal is to help keep pregnant and breastfeeding women and children under age 5 healthy."
   end
@@ -42,7 +50,7 @@ class WicPracticeWalkthrough::CLI
       list_of_all_clinics
     when "Get more information about WIC"
       more_wic_info
-      return_to_main_menu
+      return_to_only_main_menu
     when "Exit"
       goodbye
     end
