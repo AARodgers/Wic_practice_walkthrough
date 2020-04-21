@@ -12,3 +12,7 @@ require "wic_practice_walkthrough"
 
 require "irb"
 IRB.start(__FILE__)
+
+def reload!
+    load './lib/upcoming_concerts/concert.rb'
+end
