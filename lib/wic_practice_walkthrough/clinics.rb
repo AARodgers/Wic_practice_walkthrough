@@ -1,5 +1,4 @@
 class WicPracticeWalkthrough::Clinics
-    attr_accessor :all_clinic_info
 
     def self.scrape_lowry_clinic
         doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
