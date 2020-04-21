@@ -59,53 +59,54 @@ class WicPracticeWalkthrough::CLI
   end
 
   def list_of_all_clinics
-    clinic_info = prompt.select("Please pick a clinic for more information or exit:", ["Lowry Family Health Center WIC Clinic", "Eastside Neighborhood Health Center", "Montbello WIC Clinic", "North Broadway Wic Clinic", "Colorado Department of Public Health & Environment", "Westside Family Health Center WIC Clinic", "Exit"])
-    case clinic_info
-    when "Lowry Family Health Center WIC Clinic"
-      system("clear")
-      puts "Lowry Family Health Center WIC Clinic Info:"
-      puts ""
-      puts WicPracticeWalkthrough::Clinics.scrape_lowry_clinic
-      puts ""
-      return_to_main_menu
-    when "Eastside Neighborhood Health Center"
-      system("clear")
-      puts "Eastside Neighborhood Health Center Info:"
-      puts ""
-      puts WicPracticeWalkthrough::Clinics.scrape_eastside_clinic
-      puts ""
-      return_to_main_menu
-    when "Montbello WIC Clinic"
-      system("clear")
-      puts "Montbello WIC Clinic Info:"
-      puts ""
-      puts  WicPracticeWalkthrough::Clinics.scrape_montbello_clinic
-      puts ""
-      return_to_main_menu
-    when "North Broadway Wic Clinic"
-      puts ""
-      system("clear")
-      puts  "North Broadway Wic Clinic Info:"
-      puts  WicPracticeWalkthrough::Clinics.scrape_northbroadway_clinic
-      puts ""
-      return_to_main_menu
-    when "Colorado Department of Public Health & Environment"
-      system("clear")
-      puts  "Colorado Department of Public Health & Environment Info:"
-      puts ""
-      puts  WicPracticeWalkthrough::Clinics.scrape_dphe_clinic
-      puts ""
-      return_to_main_menu
-    when "Westside Family Health Center WIC Clinic"
-      system("clear")
-      puts  "Westside Family Health Center WIC Clinic Info:"
-      puts ""
-      puts WicPracticeWalkthrough::Clinics.scrape_westside_clinic
-      puts ""
-      return_to_main_menu
-    when "Exit"
-      goodbye
-    end
+    puts "test for clinic object"
+    # clinic_info = prompt.select("Please pick a clinic for more information or exit:", ["Lowry Family Health Center WIC Clinic", "Eastside Neighborhood Health Center", "Montbello WIC Clinic", "North Broadway Wic Clinic", "Colorado Department of Public Health & Environment", "Westside Family Health Center WIC Clinic", "Exit"])
+    # case clinic_info
+    # when "Lowry Family Health Center WIC Clinic"
+    #   system("clear")
+    #   puts "Lowry Family Health Center WIC Clinic Info:"
+    #   puts ""
+    #   puts WicPracticeWalkthrough::Clinics.scrape_lowry_clinic
+    #   puts ""
+    #   return_to_main_menu
+    # when "Eastside Neighborhood Health Center"
+    #   system("clear")
+    #   puts "Eastside Neighborhood Health Center Info:"
+    #   puts ""
+    #   puts WicPracticeWalkthrough::Clinics.scrape_eastside_clinic
+    #   puts ""
+    #   return_to_main_menu
+    # when "Montbello WIC Clinic"
+    #   system("clear")
+    #   puts "Montbello WIC Clinic Info:"
+    #   puts ""
+    #   puts  WicPracticeWalkthrough::Clinics.scrape_montbello_clinic
+    #   puts ""
+    #   return_to_main_menu
+    # when "North Broadway Wic Clinic"
+    #   puts ""
+    #   system("clear")
+    #   puts  "North Broadway Wic Clinic Info:"
+    #   puts  WicPracticeWalkthrough::Clinics.scrape_northbroadway_clinic
+    #   puts ""
+    #   return_to_main_menu
+    # when "Colorado Department of Public Health & Environment"
+    #   system("clear")
+    #   puts  "Colorado Department of Public Health & Environment Info:"
+    #   puts ""
+    #   puts  WicPracticeWalkthrough::Clinics.scrape_dphe_clinic
+    #   puts ""
+    #   return_to_main_menu
+    # when "Westside Family Health Center WIC Clinic"
+    #   system("clear")
+    #   puts  "Westside Family Health Center WIC Clinic Info:"
+    #   puts ""
+    #   puts WicPracticeWalkthrough::Clinics.scrape_westside_clinic
+    #   puts ""
+    #   return_to_main_menu
+    # when "Exit"
+    #   goodbye
+    # end
   end
 
   def goodbye

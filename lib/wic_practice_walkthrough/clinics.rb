@@ -9,7 +9,6 @@ class WicPracticeWalkthrough::Clinics
         lowry_clinic_info << url
         lowry_clinic_info << address_phone
         lowry_clinic_info
-        puts "Thanks for visiting!"
     end
 
     def self.scrape_eastside_clinic
