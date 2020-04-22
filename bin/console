@@ -14,5 +14,5 @@ require "irb"
 IRB.start(__FILE__)
 
 def reload!
-    load './lib/upcoming_concerts/concert.rb'
+  load '../lib/wic_practice_walkthrough/scraper.rb'
 end
