@@ -1,24 +1,23 @@
 require 'pry'
 
 class Scraper
-    # attr_accessor :doc, :clinic
-
-    # def initialize
-    #   @clinic = WicPracticeWalkthrough::Clinics.new
-    #   @doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
-    # end
 
     def get_page
-        doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
+        @doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
+        b = @doc.css(".span12")
+        binding.pry
     end
 
-    def clinic_objects
-        doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
-          doc.css(".span12").each do |object|
-            clinic = WicPracticeWalkthrough::Clinics.new
-            clinic.url = doc.css(".span12").css("a").attr("href").text
-            clinic.address_phone = doc.css(".span12").css("p")[0].text.strip.gsub("\r\n", "")
-            binding.pry
-        end
-    end
+    # def clinic_objects
+    #     @doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
+    #       @doc.css(".span12").each do |clinic_objects|
+    #         binding.pry
+    #         clinic = WicPracticeWalkthrough::Clinics.new
+    #         clinic.url = clinic_objects.css(".span12").css("a").attr("href").text
+    #         clinic.address_phone = clinic_objects.css(".span12").css("p").text.strip.gsub("\r\n", "")
+    # for title, this gives all of the titles written together: b.css("h2").css("a").text
+    #     end
+    # end
 end
+
+# Scraper.new.get_page
