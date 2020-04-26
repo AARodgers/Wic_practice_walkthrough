@@ -136,3 +136,26 @@ puts wic_clinic_google_maps
 
 Wic_clinic_phone =
 wic_clinic_phone = doc.css(".teaser--clinic__phone").text
+
+Debugging Technique: 
+ doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
+    doc.css(".span12").each do |clinic_info|
+      clinic = WicPracticeWalkthrough::Clinics.new
+      clinic.title = clinic_info.css("h2").first.text
+
+      clinic.url = clinic_objects.css(".span12").css("a").attr("href").text
+      clinic.url = clinic_info.css("a").attr("href").text
+      a = clinic_info # this is the span12 representing a clinic's info
+      puts 'ITEM A:'
+      puts a.inspect
+      # b = a.css(".span12")
+      # puts 'ITEM B:'
+      # puts b.inspect
+      c = a.css("a")
+      puts 'ITEM C:'
+      puts c.inspect
+      d = c.attr("href")
+      e = d.text
+
+      clinic.address_phone = clinic_objects.css(".span12").css("p").text.strip.gsub("\r\n", "")
+      binding.pry
