@@ -7,7 +7,7 @@ class Scraper
       clinic = WicPracticeWalkthrough::Clinics.new
       clinic.title = clinic_info.css("h2").first.text
       clinic.url = clinic_info.css("a").attr("href").text
-      clinic.address_phone = clinic_info.css("p").text.strip.gsub("\r\n", "")
+      clinic.address_phone = clinic_info.css("p")[0].text.strip.gsub("/r/n", "").strip
     end
   end
 end
