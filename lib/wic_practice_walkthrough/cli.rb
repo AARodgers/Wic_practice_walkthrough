@@ -27,7 +27,7 @@ class WicPracticeWalkthrough::CLI
 
   def more_wic_info
     system("clear")
-    puts "WIC: The Special Supplemental Nutrition Program for Women, Infants, and Children (WIC) is a nutrition program that provides nutritious groceries, nutrition education, breastfeeding support and other services free of charge to Colorado families who qualify. WIC’s goal is to help keep pregnant and breastfeeding women and children under age 5 healthy."
+    puts "WIC: The Special Supplemental Nutrition Program for Women, Infants, and Children (WIC) is a nutrition program that provides nutritious groceries, nutrition education, breastfeeding support and other services free of charge to Colorado families who qualify. WIC’s goal is to help keep pregnant and breastfeeding women and children under the age of 5 healthy."
     menu_or_exit
   end
 
@@ -43,12 +43,14 @@ class WicPracticeWalkthrough::CLI
     end
   end
 
-
   def menu
     menu_options = prompt.select("Select 'List' to see a list of WIC Clinics, 'WIC Info' to get more information about WIC or 'Exit' to exit the program: ", ["List", "WIC Info", "Exit"])
     case menu_options
     when "List"
       system("clear")
+      puts ""
+      puts "Here is a list of WIC Denver Clinics and their information:"
+      puts ""
       Scraper.new.print_clinics
       menu_or_exit
     when "WIC Info"
