@@ -21,7 +21,7 @@ class Scraper
 
   def print_clinics
     self.make_clinics
-    WicPracticeWalkthrough::Clinics.all.each do |clinic|
+    WicPracticeWalkthrough::Clinics.all.sort_by {|obj| obj.title}.each do |clinic|
       if clinic.title && clinic.title != ""
         puts "Clinic Name: #{clinic.title}"
         puts "  Website: #{clinic.url}"
@@ -30,3 +30,6 @@ class Scraper
     end
   end
 end
+
+
+WicPracticeWalkthrough::Clinics.all.sort_by {|obj| obj.title}
