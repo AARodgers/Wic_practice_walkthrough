@@ -1,11 +1,11 @@
 # TODO for each repo
-- [ ] Rename repos to something short and clean: all lowercase, underscores, keep it concise
-  - [ ] Teachers app -> teacher_organizer
-  - [ ] CLI APP Wic Clinic Finder -> wic_clinic_finder
-- [ ] Write description for repo in About section
+- [x] Rename repos to something short and clean: all lowercase, underscores, keep it concise
+  - [x] Teachers app -> teacher_organizer
+  - [x] CLI APP Wic Clinic Finder -> wic_clinic_finder
+- [x] Write description for repo in About section
 - [ ] Write README
-- [ ] Add LICENSE file
-- [ ] Make sure license appears in About section properly
+- [x] Add LICENSE file
+- [x] Make sure license appears in About section properly
 - [ ] Clean repo of unused/useless/incorrect files
 - [ ] Lint all files with [RuboCop](https://rubocop.org/)
   - [ ] Fix all discovered issues with `rubocop --fix` and manual intervention
@@ -82,3 +82,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the WicPracticeWalkthrough project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/wic_practice_walkthrough/blob/master/CODE_OF_CONDUCT.md).
+
