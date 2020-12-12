@@ -9,5 +9,3 @@ class WicPracticeWalkthrough::Clinics
         clinic_info
     end
 end
-
-

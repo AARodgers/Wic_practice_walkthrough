@@ -65,42 +65,42 @@ class WicPracticeWalkthrough::CLI
       system("clear")
       puts "Lowry Family Health Center WIC Clinic Info:"
       puts ""
-      puts WicPracticeWalkthrough::Clinics.scrape_lowry_clinic
+      puts WicPracticeWalkthrough::Clinics.scrape_clinic_info(0)
       puts ""
       return_to_main_menu
     when "Eastside Neighborhood Health Center"
       system("clear")
       puts "Eastside Neighborhood Health Center Info:"
       puts ""
-      puts WicPracticeWalkthrough::Clinics.scrape_eastside_clinic
+      puts WicPracticeWalkthrough::Clinics.scrape_clinic_info(1)
       puts ""
       return_to_main_menu
     when "Montbello WIC Clinic"
       system("clear")
       puts "Montbello WIC Clinic Info:"
       puts ""
-      puts  WicPracticeWalkthrough::Clinics.scrape_montbello_clinic
+      puts  WicPracticeWalkthrough::Clinics.scrape_clinic_info(2)
       puts ""
       return_to_main_menu
     when "North Broadway Wic Clinic"
       puts ""
       system("clear")
       puts  "North Broadway Wic Clinic Info:"
-      puts  WicPracticeWalkthrough::Clinics.scrape_northbroadway_clinic
+      puts  WicPracticeWalkthrough::Clinics.scrape_clinic_info(3)
       puts ""
       return_to_main_menu
     when "Colorado Department of Public Health & Environment"
       system("clear")
       puts  "Colorado Department of Public Health & Environment Info:"
       puts ""
-      puts  WicPracticeWalkthrough::Clinics.scrape_dphe_clinic
+      puts  WicPracticeWalkthrough::Clinics.scrape_clinic_info(5)
       puts ""
       return_to_main_menu
     when "Westside Family Health Center WIC Clinic"
       system("clear")
       puts  "Westside Family Health Center WIC Clinic Info:"
       puts ""
-      puts WicPracticeWalkthrough::Clinics.scrape_westside_clinic
+      puts WicPracticeWalkthrough::Clinics.scrape_clinic_info(6)
       puts ""
       return_to_main_menu
     when "Exit"
