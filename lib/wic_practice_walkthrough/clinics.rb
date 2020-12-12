@@ -1,4 +1,5 @@
 class WicPracticeWalkthrough::Clinics
+    # Scrapes and returns a clinic's: address, url, and phone number.
     def self.scrape_clinic_info(clinic_number)
         doc = Nokogiri::HTML(open("https://www.wicprograms.org/ci/co-denver"))
         clinic_info = []
