@@ -1,41 +1,33 @@
-# WicPracticeWalkthrough
+# wic_clinic_finder
 
-This gem allows one to search WIC Clinics in Denver and to get their location, url and address.
+Watch this video to see how it works:
 
-## Installation
+# Description
+
+This is a gem that uses scraping to gather information such as a phone number, address and url for WIC Clinics in the Denver area. It allows the user to select a clinic and recieve that information.
+
+# Intent
+
+I built this gem to practice scraping information on the web to gather information about WIC Clinics because I want to eventually build a website for women to find resources that includes all of the WIC clinics in the country. WIC is a federal non-profit program for low-income mothers and children under the age of five.
+
+# Getting Started
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'wic_practice_walkthrough'
-```
+`ruby gem 'wic_practice_walkthrough'`
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+# Usage
+
+You can also install it yourself as:
 
     $ gem install wic_practice_walkthrough
 
-## Usage
+# Contributing
+I accept pull requests from people that want to improve upon this app or add features. Open an issue or a pull request and I'll be happy to discuss adding your code.
 
-Once the gem is installed, type ./bin/wic-clinics to start the application. The main menu will be prompted. Use your up and down arrows to select options. 
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/wic_practice_walkthrough. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the WicPracticeWalkthrough project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/wic_practice_walkthrough/blob/master/CODE_OF_CONDUCT.md).
+# License
+License information can be found in the [LICENSE](LICENSE) file.
