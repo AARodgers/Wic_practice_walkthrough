@@ -1,6 +1,6 @@
 # wic_clinic_finder
 
-Watch this video to see how it works:
+<!-- Watch this video to see how it works: -->
 
 # Description
 
@@ -28,7 +28,7 @@ In your terminal, type the command below to run the application and get to the m
 
 $ ruby bin/wic-clinics
 
-This brings you to the main menu, where you have options to select different clinics to get their information. 
+This brings you to the main menu, where you have options to select different clinics to get their information. Use the up and down arrows to highlight a clinic and press 'Enter' to select it.
 
 # Contributing
 I accept pull requests from people that want to improve upon this app or add features. Open an issue or a pull request and I'll be happy to discuss adding your code.
