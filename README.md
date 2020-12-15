@@ -12,9 +12,11 @@ I built this gem to practice scraping information on the web to gather informati
 
 # Getting Started
 
-Add this line to your application's Gemfile:
+Installation:
 
-`ruby gem 'wic_practice_walkthrough'`
+Clone this project locally:
+
+`git clone https://github.com/AARodgers/wic_clinic_finder.git`
 
 And then execute:
 
@@ -22,9 +24,11 @@ And then execute:
 
 # Usage
 
-You can also install it yourself as:
+In your terminal, type the command below to run the application and get to the main menu:
 
-    $ gem install wic_practice_walkthrough
+$ ruby bin/wic-clinics
+
+This brings you to the main menu, where you have options to select different clinics to get their information. 
 
 # Contributing
 I accept pull requests from people that want to improve upon this app or add features. Open an issue or a pull request and I'll be happy to discuss adding your code.

@@ -7,4 +7,5 @@ For Video:
 
 For Readme TO DO:
 - add video link
-- make sure installation instructions work
+- make sure installation instructions work - NEED HELP!
+
