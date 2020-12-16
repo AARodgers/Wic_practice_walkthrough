@@ -6,6 +6,6 @@ For Video:
 - how to get to github to see code and is open source
 
 For Readme TO DO:
-- add video link
-- make sure installation instructions work - NEED HELP!
-
+- add video link and pictures?
+- how get $ ruby bin/wic-clinics to look like bundle
+- make sure installation instructions work - have Matt try
