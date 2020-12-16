@@ -3,7 +3,8 @@
 ![Pick a Clinic](images/pick_a_clinic.png)
 ![Clinic Info](images/clinic_info.png)
 
-<!-- Watch this video to see how it works: -->
+Watch this video to see how it works:
+https://youtu.be/JqPajWlOyxY
 
 # Description
 
